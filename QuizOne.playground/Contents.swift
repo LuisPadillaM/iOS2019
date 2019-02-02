@@ -13,7 +13,7 @@ func biggerPairs( input : [Int]) -> Bool {
     return pairs.count > unPairs.count
 }
 
-biggerPairs(input: [2, 3, 4, 5])
+biggerPairs(input: [2, 3, 4, 5, 6])
 
 func divisors (input : Int) -> [Int] {
     
