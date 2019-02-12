@@ -26,11 +26,12 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController : UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250.0
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1000
     }
@@ -42,6 +43,4 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel.text = "\(indexPath.row)"
         return cell
     }
-    
-    
 }

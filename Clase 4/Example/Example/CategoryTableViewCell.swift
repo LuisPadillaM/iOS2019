@@ -1,25 +1,27 @@
 //
-//  CustomTableViewCell.swift
-//  Project 3
+//  CategoryTableViewCell.swift
+//  Example
 //
-//  Created by Luis Padilla  on 2/2/19.
-//  Copyright © 2019 Luis Padilla . All rights reserved.
+//  Created by Luis Padilla  on 2/10/19.
+//  Copyright © 2019 Cenfotec. All rights reserved.
 //
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class CategoryTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var CategoryLabel: UILabel!
+    @IBOutlet weak var CategoryImage: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
     
