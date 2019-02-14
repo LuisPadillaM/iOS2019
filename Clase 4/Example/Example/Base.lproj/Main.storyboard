@@ -98,8 +98,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="mqV-T5-Oij">
-                                <rect key="frame" x="0.0" y="97" width="375" height="313"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="mqV-T5-Oij">
+                                <rect key="frame" x="0.0" y="40" width="375" height="607"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t7q-xn-etf">
                                         <rect key="frame" x="0.0" y="0.0" width="43" height="20.5"/>
@@ -108,26 +108,26 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qug-b7-Jgb">
-                                        <rect key="frame" x="0.0" y="41.5" width="375" height="30"/>
+                                        <rect key="frame" x="0.0" y="41.5" width="375" height="324"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuerpo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XT-Gi-3zg">
-                                        <rect key="frame" x="0.0" y="92.5" width="57" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="386.5" width="57" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sZG-fT-guJ">
-                                        <rect key="frame" x="0.0" y="134" width="375" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sZG-fT-guJ">
+                                        <rect key="frame" x="0.0" y="428" width="375" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-cu-aXO">
-                                        <rect key="frame" x="0.0" y="283" width="375" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO3-cu-aXO">
+                                        <rect key="frame" x="0.0" y="577" width="375" height="30"/>
                                         <color key="backgroundColor" red="0.81683474779999998" green="0.17150962350000001" blue="0.16286152600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Save"/>
@@ -142,11 +142,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="mqV-T5-Oij" firstAttribute="top" secondItem="zMm-d7-0v0" secondAttribute="top" constant="20" id="7qi-tY-Aos"/>
                             <constraint firstItem="mqV-T5-Oij" firstAttribute="centerX" secondItem="icQ-lB-Itq" secondAttribute="centerX" id="Txa-yo-RNb"/>
+                            <constraint firstItem="zMm-d7-0v0" firstAttribute="bottom" secondItem="mqV-T5-Oij" secondAttribute="bottom" constant="20" id="U2o-RK-LY5"/>
                             <constraint firstItem="mqV-T5-Oij" firstAttribute="width" secondItem="icQ-lB-Itq" secondAttribute="width" id="eq2-jy-YlO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zMm-d7-0v0"/>
                     </view>
+                    <connections>
+                        <outlet property="newsBody" destination="sZG-fT-guJ" id="XI5-OK-IoF"/>
+                        <outlet property="newsTitle" destination="Qug-b7-Jgb" id="mo2-yE-lOi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11R-Dl-4uc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,9 +165,29 @@
                     <view key="view" contentMode="scaleToFill" id="mCV-7U-pve">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A1m-4A-YTb">
+                                <rect key="frame" x="0.0" y="40" width="375" height="607"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BnW-jR-jeX">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A1m-4A-YTb" firstAttribute="width" secondItem="mCV-7U-pve" secondAttribute="width" id="XSg-Hp-KF8"/>
+                            <constraint firstItem="A1m-4A-YTb" firstAttribute="centerX" secondItem="mCV-7U-pve" secondAttribute="centerX" id="YVz-7Z-a4C"/>
+                            <constraint firstItem="UQu-2p-qqp" firstAttribute="bottom" secondItem="A1m-4A-YTb" secondAttribute="bottom" constant="20" id="eDN-Qw-SdG"/>
+                            <constraint firstItem="A1m-4A-YTb" firstAttribute="top" secondItem="UQu-2p-qqp" secondAttribute="top" constant="20" id="iIx-CB-4Xq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UQu-2p-qqp"/>
                     </view>
+                    <connections>
+                        <outlet property="newsTableView" destination="BnW-jR-jeX" id="ebd-Er-k4o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N92-SN-BiP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,7 +9,10 @@
 import UIKit
 
 class AddNewsViewController: UIViewController {
-
+    
+    @IBOutlet weak var newsTitle: UITextField!
+    @IBOutlet weak var newsBody: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

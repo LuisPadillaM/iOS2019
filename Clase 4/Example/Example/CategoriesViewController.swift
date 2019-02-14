@@ -10,28 +10,44 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
     
-    // let EconomyCategory = Category(name : "Economía")
-               // let IncidentsCategory = Category(name : "Sucesos")
-           // let SportsCategory = Category(name : "Deportes")
-       // let SportsCategory = Category(name : "Deportes")
-    // let TechnologyCategory = Category(name : "Tecnología")
-    // var Categories = [EconomyCategory, IncidentsCategorym SportsCategory, TechnologyCategory]
+     @IBOutlet weak var categoriesTableView: UITableView!
+    
+    let customTableIdentifier = "CategoryTableViewCell"
+    let EconomyCategory = Category(name : "Economía", image :  "economy", news: [])
+    let IncidentsCategory = Category(name : "Sucesos", image : "incident", news: [])
+    let SportsCategory = Category(name : "Deportes", image : "sports", news : [])
+    let TechnologyCategory = Category(name : "Tecnología", image : "technology", news : [])
+    var Categories = [Category]()
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        registerCustomTableView()
+        Categories = [EconomyCategory, IncidentsCategory, SportsCategory, TechnologyCategory]
+    }
 
-        // Do any additional setup after loading the view.
+
+    func registerCustomTableView(){ // primero registro celda
+        let nib = UINib(nibName: customTableIdentifier, bundle: nil)
+        categoriesTableView.register(nib, forCellReuseIdentifier : self.customTableIdentifier)
+    }
+
+
+}
+
+extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.Categories.count;
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: self.customTableIdentifier) as? CategoryTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.CategoryLabel.text = Categories[indexPath.row].name
+        // cell.CategoryImage = UIImage(named:  Categories[indexPath.row].image)
+        return cell
     }
-    */
-
+    
+    
 }
