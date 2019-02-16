@@ -58,14 +58,14 @@
 		784EC9BB21FCCA0800577844 /* Clase#2 */ = {
 			isa = PBXGroup;
 			children = (
-				784EC9BC21FCCA0800577844 /* AppDelegate.swift */,
-				784EC9C021FCCA0800577844 /* Main.storyboard */,
+				784EC9CE21FCCA9000577844 /* PeopleListViewController.swift */,
+				784EC9D021FCCAAA00577844 /* AddPersonViewController.swift */,
 				BA2CA1FD2205EF1600381D91 /* Person.swift */,
+				784EC9C021FCCA0800577844 /* Main.storyboard */,
+				784EC9BC21FCCA0800577844 /* AppDelegate.swift */,
 				784EC9C321FCCA0900577844 /* Assets.xcassets */,
 				784EC9C521FCCA0900577844 /* LaunchScreen.storyboard */,
 				784EC9C821FCCA0900577844 /* Info.plist */,
-				784EC9CE21FCCA9000577844 /* PeopleListViewController.swift */,
-				784EC9D021FCCAAA00577844 /* AddPersonViewController.swift */,
 			);
 			path = "Clase#2";
 			sourceTree = "<group>";

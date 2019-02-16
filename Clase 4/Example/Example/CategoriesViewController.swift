@@ -10,9 +10,12 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
     
-     @IBOutlet weak var categoriesTableView: UITableView!
+    
+    @IBOutlet weak var categoryTableView: UITableView!
     
     let customTableIdentifier = "CategoryTableViewCell"
+    let newsViewControllerIdentifier = "NewsViewController"
+    
     let EconomyCategory = Category(name : "Economía", image :  "economy", news: [])
     let IncidentsCategory = Category(name : "Sucesos", image : "incident", news: [])
     let SportsCategory = Category(name : "Deportes", image : "sports", news : [])
@@ -22,14 +25,21 @@ class CategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.Categories = [EconomyCategory, IncidentsCategory, SportsCategory, TechnologyCategory]
         registerCustomTableView()
-        Categories = [EconomyCategory, IncidentsCategory, SportsCategory, TechnologyCategory]
     }
 
 
     func registerCustomTableView(){ // primero registro celda
         let nib = UINib(nibName: customTableIdentifier, bundle: nil)
-        categoriesTableView.register(nib, forCellReuseIdentifier : self.customTableIdentifier)
+        categoryTableView.register(nib, forCellReuseIdentifier : self.customTableIdentifier)
+    }
+    
+    func goToCategoryNews(selectedCategory : Category){
+        if let controller = storyboard?.instantiateViewController(withIdentifier: self.newsViewControllerIdentifier) as? NewsViewController{
+            controller.currentCategory = selectedCategory
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
 
 
@@ -37,15 +47,20 @@ class CategoriesViewController: UIViewController {
 
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.Categories.count;
+        return self.Categories.count
     }
-    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        self.goToCategoryNews(selectedCategory : self.Categories[indexPath.row])
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: self.customTableIdentifier) as? CategoryTableViewCell else {
             return UITableViewCell()
         }
-        cell.CategoryLabel.text = Categories[indexPath.row].name
-        // cell.CategoryImage = UIImage(named:  Categories[indexPath.row].image)
+
+        let category = self.Categories[indexPath.row]
+        cell.CategoryLabel.text = category.name
+        cell.CategoryImage.image = UIImage(named:  category.image)
         return cell
     }
     

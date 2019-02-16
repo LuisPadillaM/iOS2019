@@ -19,8 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tux-YT-tvD">
-                        <rect key="frame" x="0.0" y="12" width="320" height="41"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tux-YT-tvD">
+                        <rect key="frame" x="0.0" y="10" width="320" height="179.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UPI-Zs-25n">
                                 <rect key="frame" x="86" y="0.0" width="148.5" height="20.5"/>
@@ -56,18 +56,46 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vA-IC-oLh">
+                                <rect key="frame" x="0.0" y="41" width="320" height="108.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GLF-gk-0SK">
+                                <rect key="frame" x="0.0" y="149.5" width="320" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-Hp-sda">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                        <color key="backgroundColor" red="0.81683474779999998" green="0.17150962350000001" blue="0.16286152600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Delete"/>
+                                        <connections>
+                                            <action selector="deleteBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dhN-Kv-L3h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nTu-r6-AFp"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="1vA-IC-oLh" firstAttribute="centerX" secondItem="Tux-YT-tvD" secondAttribute="centerX" id="UXD-r0-Ytx"/>
+                            <constraint firstItem="GLF-gk-0SK" firstAttribute="width" secondItem="Tux-YT-tvD" secondAttribute="width" id="Xgn-FH-guQ"/>
+                            <constraint firstItem="1vA-IC-oLh" firstAttribute="width" secondItem="Tux-YT-tvD" secondAttribute="width" id="s7c-5s-0MW"/>
+                        </constraints>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Tux-YT-tvD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wDN-UN-Wl2"/>
-                    <constraint firstItem="Tux-YT-tvD" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="wRV-pC-isp"/>
+                    <constraint firstItem="Tux-YT-tvD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="OVa-36-CfC"/>
+                    <constraint firstItem="Tux-YT-tvD" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="RzT-88-czm"/>
+                    <constraint firstItem="Tux-YT-tvD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="msa-wP-MKS"/>
+                    <constraint firstAttribute="bottom" secondItem="Tux-YT-tvD" secondAttribute="bottom" constant="10" id="soD-YP-p95"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="newsDate" destination="wTQ-se-Qax" id="hwe-sI-XfW"/>
-                <outlet property="newsTiitle" destination="NlR-Uj-hJk" id="1bc-Ad-OT1"/>
+                <outlet property="newsTitle" destination="NlR-Uj-hJk" id="yXZ-j3-UUg"/>
             </connections>
         </tableViewCell>
     </objects>

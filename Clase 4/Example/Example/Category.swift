@@ -9,11 +9,11 @@
 import Foundation
 
 class Category  {
-    var name : String
-    var image : String
-    var news : [News]
+    var name : String = ""
+    var image : String = ""
+    var news : [News] = []
     
-    init(name : String, image : String, news : [News]){
+    init(name : String = "", image : String = "", news : [News] = []){
         self.name = name
         self.image = image
         self.news = news

@@ -15,8 +15,6 @@ class PeopleListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     
@@ -25,10 +23,6 @@ class PeopleListViewController: UIViewController {
             addPersonViewController.delegate = self
             present(addPersonViewController, animated: true, completion: nil)
         }
-        
-        
-        
-        
     }
     
 

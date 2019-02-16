@@ -8,26 +8,49 @@
 
 import UIKit
 
+protocol AddNewsViewControllerDelegate : class {
+    func addNews(news : News)
+}
+
+extension AddNewsViewControllerDelegate {
+    func addNews(news : News) {}
+}
+
 class AddNewsViewController: UIViewController {
     
     @IBOutlet weak var newsTitle: UITextField!
     @IBOutlet weak var newsBody: UITextView!
+    weak var delegate : AddNewsViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        view.endEditing(true)
     }
-    */
+    
+    @IBAction func saveNewsElement(_ sender: Any) {
+        if let title = newsTitle.text, let body = newsBody.text, title.count > 0, body.count > 0 {
+            self.addNews(title : title, body : body)
+        } else {
+            showAlertController();
+        }
+    }
+    
+    func addNews(title : String, body : String) {
+        let news = News(createdAt : Date(), title: title, body : body)
+        delegate?.addNews(news: news)
+    }
+    
+    func showAlertController() {
+        let alertController = UIAlertController(title : "Error", message : "Debe llenar todos los campos", preferredStyle : .alert)
+        
+        let action = UIAlertAction(title : "OK", style : .default) { (_) in
+            self.newsTitle.becomeFirstResponder()
+        }
+        alertController.addAction(action)
+        present(alertController, animated : true, completion: nil)
+    }
 
 }
