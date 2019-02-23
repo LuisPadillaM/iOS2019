@@ -25,7 +25,7 @@ class CatViewController: UIViewController {
     private func loadCats() {
         do {
             let realm = try Realm()
-            let cats = realm.objects(Cat.self)
+            let cats = realm.objects(Cat.self).sorted(byKeyPath: "order")
             if cats.isEmpty {
                 saveCatInRealm()
             }

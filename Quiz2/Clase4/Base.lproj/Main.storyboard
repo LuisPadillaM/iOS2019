@@ -25,8 +25,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="y1K-I5-KIO"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="js5-tN-XUc"/>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="QaF-WA-kKe"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="twr-iH-dpT"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
@@ -44,7 +44,6 @@
                     <navigationItem key="navigationItem" id="coJ-Zo-vHl"/>
                     <connections>
                         <outlet property="catTableView" destination="2px-WB-ufd" id="Sde-WX-egB"/>
-                        <outlet property="tableView" destination="2px-WB-ufd" id="DFs-B9-BLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
