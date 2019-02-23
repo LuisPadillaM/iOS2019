@@ -43,7 +43,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="coJ-Zo-vHl"/>
                     <connections>
-                        <outlet property="catTableView" destination="2px-WB-ufd" id="pE6-TK-2q2"/>
+                        <outlet property="catTableView" destination="2px-WB-ufd" id="Sde-WX-egB"/>
                         <outlet property="tableView" destination="2px-WB-ufd" id="DFs-B9-BLE"/>
                     </connections>
                 </viewController>

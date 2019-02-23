@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/luispadilla/Documents/Cursos/iOS/iOS own/Quiz2/Clase4/Scenes/Categories/CatViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:Clase4.xcodeproj">
    </FileRef>
    <FileRef

@@ -1,6 +1,6 @@
 //
 //  CatViewController.swift
-//  
+//
 //
 //  Created by Luis Padilla  on 2/23/19.
 //
@@ -9,7 +9,7 @@ import UIKit
 import RealmSwift
 
 class CatViewController: UIViewController {
-
+    
     @IBOutlet weak var catTableView: UITableView!
     private let customCellIdentifier = "CatTableViewCell"
     private let customCellHeight: CGFloat = 80.0
@@ -41,7 +41,7 @@ class CatViewController: UIViewController {
     
     
     private func saveCatInRealm(){
- 
+        
         var catsToInsert = [Cat]()
         for value in  0...10 {
             let cat = Cat.init(value : ["name" : "Cat \(value)", "color" : "#FFFFF\(value)", "order" : value])
@@ -51,7 +51,7 @@ class CatViewController: UIViewController {
             saveRealmObject(realmObject: cat)
         }
         loadCats()
-
+        
     }
     
     
@@ -92,3 +92,4 @@ extension CatViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
+

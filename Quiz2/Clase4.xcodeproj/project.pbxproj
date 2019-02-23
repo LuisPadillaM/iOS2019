@@ -12,9 +12,9 @@
 		7833AF352217A00E002D7320 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7833AF342217A00E002D7320 /* Assets.xcassets */; };
 		7833AF382217A00E002D7320 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7833AF362217A00E002D7320 /* LaunchScreen.storyboard */; };
 		BA2DB3B822218FF900B175D0 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DB3B722218FF900B175D0 /* Cat.swift */; };
-		BA2DB3BA2221911C00B175D0 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DB3B92221911C00B175D0 /* CatViewController.swift */; };
 		BA2DB3BF222192E200B175D0 /* CatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DB3BD222192E200B175D0 /* CatTableViewCell.swift */; };
 		BA2DB3C0222192E200B175D0 /* CatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA2DB3BE222192E200B175D0 /* CatTableViewCell.xib */; };
+		BA2DB3C4222198AC00B175D0 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2DB3C3222198AC00B175D0 /* CatViewController.swift */; };
 		C20F67BEDB3EEA75D15CBEBB /* Pods_Clase4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D004CFFF8B2CDB78E31D26 /* Pods_Clase4.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,9 +29,9 @@
 		7833AF392217A00E002D7320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D004CFFF8B2CDB78E31D26 /* Pods_Clase4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clase4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2DB3B722218FF900B175D0 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
-		BA2DB3B92221911C00B175D0 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CatViewController.swift; path = "/Users/luispadilla/Documents/Cursos/iOS/iOS own/Quiz2/Clase4/Scenes/Categories/CatViewController.swift"; sourceTree = "<absolute>"; };
 		BA2DB3BD222192E200B175D0 /* CatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTableViewCell.swift; sourceTree = "<group>"; };
 		BA2DB3BE222192E200B175D0 /* CatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatTableViewCell.xib; sourceTree = "<group>"; };
+		BA2DB3C3222198AC00B175D0 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				7833AF572217AC12002D7320 /* CustomCells */,
-				BA2DB3B92221911C00B175D0 /* CatViewController.swift */,
+				BA2DB3C3222198AC00B175D0 /* CatViewController.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -253,8 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7833AF2E2217A00E002D7320 /* AppDelegate.swift in Sources */,
+				BA2DB3C4222198AC00B175D0 /* CatViewController.swift in Sources */,
 				BA2DB3B822218FF900B175D0 /* Cat.swift in Sources */,
-				BA2DB3BA2221911C00B175D0 /* CatViewController.swift in Sources */,
 				BA2DB3BF222192E200B175D0 /* CatTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
