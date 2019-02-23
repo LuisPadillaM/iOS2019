@@ -16,20 +16,24 @@ class CategoriesViewController: UIViewController {
     let customTableIdentifier = "CategoryTableViewCell"
     let newsViewControllerIdentifier = "NewsViewController"
     
-    let EconomyCategory = Category(name : "Economía", image :  "economy", news: [])
-    let IncidentsCategory = Category(name : "Sucesos", image : "incident", news: [])
-    let SportsCategory = Category(name : "Deportes", image : "sports", news : [])
-    let TechnologyCategory = Category(name : "Tecnología", image : "technology", news : [])
-    var Categories = [Category]()
+    var categories = [Category]()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.Categories = [EconomyCategory, IncidentsCategory, SportsCategory, TechnologyCategory]
+        initCategories()
         registerCustomTableView()
     }
 
 
+    func initCategories(){
+        let EconomyCategory = Category(name : "Economía", image :  "economy", news: [])
+        let IncidentsCategory = Category(name : "Sucesos", image : "incident", news: [])
+        let SportsCategory = Category(name : "Deportes", image : "sports", news : [])
+        let TechnologyCategory = Category(name : "Tecnología", image : "technology", news : [])
+        self.categories = [EconomyCategory, IncidentsCategory, SportsCategory, TechnologyCategory]
+    }
+    
     func registerCustomTableView(){ // primero registro celda
         let nib = UINib(nibName: customTableIdentifier, bundle: nil)
         categoryTableView.register(nib, forCellReuseIdentifier : self.customTableIdentifier)
@@ -47,10 +51,13 @@ class CategoriesViewController: UIViewController {
 
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.Categories.count
+        return self.categories.count
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        self.goToCategoryNews(selectedCategory : self.Categories[indexPath.row])
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.goToCategoryNews(selectedCategory : self.categories[indexPath.row])
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,7 +65,7 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        let category = self.Categories[indexPath.row]
+        let category = self.categories[indexPath.row]
         cell.CategoryLabel.text = category.name
         cell.CategoryImage.image = UIImage(named:  category.image)
         return cell
