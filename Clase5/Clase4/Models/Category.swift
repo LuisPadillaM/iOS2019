@@ -9,9 +9,18 @@
 import Foundation
 import RealmSwift
 
-class Category : Object {
+class Category: Object {
     @objc dynamic var name = ""
     @objc dynamic var image = ""
-    @objc dynamic var identifier = UUID()
+    @objc dynamic var identifier = NSUUID().uuidString
     let news = List<News>()
+    
+    override static func primaryKey() -> String? {
+        return "identifier"
+    }
+    
+    override static func indexedProperties() -> [String] {
+        return ["name"]
+    }
+
 }

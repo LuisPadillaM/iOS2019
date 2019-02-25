@@ -7,14 +7,10 @@
 //
 
 import Foundation
+import RealmSwift
 
-class ShoppingItem {
+class ShoppingItem : Object {
     
-    var date : Date
-    var title : String
-    
-    init(date : Date, title : String) {
-        self.date = date
-        self.title = title
-    }
+    @objc dynamic var date = Date()
+    @objc dynamic var title = ""
 }

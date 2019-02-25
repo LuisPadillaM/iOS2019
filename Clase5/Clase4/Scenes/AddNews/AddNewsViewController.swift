@@ -31,7 +31,10 @@ class AddNewsViewController: UIViewController {
     
     @objc private func addItem(sender: UIBarButtonItem){
         if let title = titleTextField.text, let body = bodyTextView.text, title.count > 0, body.count > 0 {
-            let news = News.init(createAt: Date(), title: title, body: body)
+            let news = News()
+            news.createAt = Date()
+                        news.title = title
+            news.body = body
             delegate?.addNews(news: news)
             navigationController?.popViewController(animated: true)
         }

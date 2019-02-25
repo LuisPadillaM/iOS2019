@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (4.6.0)
+  - JGProgressHUD (2.0)
+  - Kingfisher (4.5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - JGProgressHUD
+  - Kingfisher
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - JGProgressHUD
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  JGProgressHUD: c402c0f41fc291ca7e33bba2f999118d9682dd9c
+  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+
+PODFILE CHECKSUM: 1be94e3834aa201664b7054fe33fa1a36b3f58ff
+
+COCOAPODS: 1.6.0

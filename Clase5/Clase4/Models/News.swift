@@ -15,4 +15,3 @@ class News: Object {
     @objc dynamic var body = ""
     let category = LinkingObjects(fromType: Category.self, property: "news")
 }
-

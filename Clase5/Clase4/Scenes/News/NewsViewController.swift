@@ -78,25 +78,26 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            category?.news.remove(at: indexPath.row)
+            if let category = category {
+                  RealmHelper.deleteNews(news : category.news[indexPath.row])
+            }
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .middle)
             tableView.endUpdates()
-            updateCategoryDataSource()
         }
     }
     
     private func updateCategoryDataSource() {
-        if let category = category {
-            delegate?.updateNews(identifier: category.identifier, news: category.news)
-        }
+//        if let category = category {
+//            delegate?.updateNews(identifier: category.identifier, news: category.news)
+//        }
     }
 }
 
 extension NewsViewController: AddNewsViewControllerDelegate {
     func addNews(news: News) {
-        category?.news.append(news)
-        tableView.reloadData()
-        updateCategoryDataSource()
+        if let category = category {
+            RealmHelper.addNewsToCategory(category: category, news: news)
+        }
     }
 }
