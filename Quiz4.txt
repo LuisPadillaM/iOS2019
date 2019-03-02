@@ -1,0 +1,7 @@
+Clean swift 
+consta de las siguientes capas 
+Presenter es la capa encargada unicamente de manejar UI 
+Interactor es la capa encargada de manejar las interacciones entre las distintas pantallas
+y el View controller donde se manejan las interacciones entre las distintas capas 
+también es importante destacar que muchas de los parseos o lógicas de negocio se realizan 
+con ayuda de los workers que pueden ser compartidos o propios para cada view controller.
