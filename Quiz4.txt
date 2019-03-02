@@ -5,3 +5,9 @@ Interactor es la capa encargada de manejar las interacciones entre las distintas
 y el View controller donde se manejan las interacciones entre las distintas capas 
 también es importante destacar que muchas de los parseos o lógicas de negocio se realizan 
 con ayuda de los workers que pueden ser compartidos o propios para cada view controller.
+
+e.g 
+doy click a un boton para ir a otra pantalla la interacción va al view controller,
+esta es manejada por el interactor que a su vez evalua si hay algún routing y lo pasa al router 
+si no realiza el parseo con ayuda de algún worker y posteriormente pasa el resultado al 
+presenter.
