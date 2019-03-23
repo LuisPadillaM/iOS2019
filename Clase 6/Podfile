@@ -3,7 +3,7 @@ target 'Clase 6' do
   use_frameworks!
   pod 'Kingfisher'
   pod 'Alamofire'
-  # pod 'R.swift’, ‘5.0.0.alpha.1’
+  pod 'R.swift'
   pod 'JGProgressHUD'
   # Pods for Clase 6
 

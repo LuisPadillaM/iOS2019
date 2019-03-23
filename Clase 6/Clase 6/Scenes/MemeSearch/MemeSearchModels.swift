@@ -10,6 +10,22 @@ import UIKit
 
 enum MemeSearch {
     
+    enum DataSource {
+        struct Request {
+            var criteria : String
+        }
+        struct  Response {
+            var items : [Meme]?
+            var error : ServiceError?
+        }
+        struct ViewModel {
+            struct DisplayedItem {
+                var url : URL?
+                var placeHolderImage : UIImage?
+            }
+            var displayedItems : [DisplayedItem]
+        }
+    }
     // MARK: Use cases
 //    enum Something {
 //        struct Request {

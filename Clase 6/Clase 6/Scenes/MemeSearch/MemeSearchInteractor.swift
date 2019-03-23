@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MemeSearchBusinessLogic {
-
+    func requestDataSource(request : MemeSearch.DataSource.Request)
 }
 
 protocol MemeSearchDataStore {
@@ -19,7 +19,14 @@ protocol MemeSearchDataStore {
 class MemeSearchInteractor: MemeSearchBusinessLogic, MemeSearchDataStore {
     var presenter: MemeSearchPresentationLogic?
     var worker = MemeSearchWorker()
+    var memeWorker = MemeWorker(store : MemesAPI())
     //var name: String = ""
     
     // MARK: Interactor logic
+    func requestDataSource(request : MemeSearch.DataSource.Request) {
+        memeWorker.fetchMemes(searchCriteria : request.criteria) { (memes, error) in
+            let response = MemeSearch.DataSource.Response.init(items: memes, error: error)
+            self.presenter?.presentDataSource(response: response)
+        }
+    }
 }

@@ -1,24 +1,32 @@
 PODS:
-  - Alamofire (4.6.0)
-  - JGProgressHUD (2.0)
-  - Kingfisher (4.5.0)
+  - Alamofire (4.8.1)
+  - JGProgressHUD (2.0.3)
+  - Kingfisher (5.2.0)
+  - R.swift (5.0.2):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - JGProgressHUD
   - Kingfisher
+  - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - JGProgressHUD
     - Kingfisher
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
-  JGProgressHUD: c402c0f41fc291ca7e33bba2f999118d9682dd9c
-  Kingfisher: 26ae0473102b77b575da51960c932431e3745407
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  JGProgressHUD: 12b20a8f4ffe05258f8635c1ab92816e451f904d
+  Kingfisher: 07067cfacf371117330dceb4b4b8f5c4b691ab42
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
+  R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: 1be94e3834aa201664b7054fe33fa1a36b3f58ff
+PODFILE CHECKSUM: efc4ea2e0dfff28895b8868367d24e839aeafa83
 
 COCOAPODS: 1.6.0

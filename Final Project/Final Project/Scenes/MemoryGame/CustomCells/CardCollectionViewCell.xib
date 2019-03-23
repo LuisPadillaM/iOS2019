@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="gTV-IL-0wX" customClass="CardCollectionViewCell" customModule="Final_Project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWe-Tp-7r3">
+                        <rect key="frame" x="10" y="10" width="230" height="230"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Huw-n2-VLV">
+                                <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eOi-6g-huL">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Huw-n2-VLV" firstAttribute="centerX" secondItem="DWe-Tp-7r3" secondAttribute="centerX" id="0U6-uW-J1Q"/>
+                            <constraint firstItem="Huw-n2-VLV" firstAttribute="height" secondItem="DWe-Tp-7r3" secondAttribute="height" id="MeV-iF-KfN"/>
+                            <constraint firstItem="Huw-n2-VLV" firstAttribute="centerY" secondItem="DWe-Tp-7r3" secondAttribute="centerY" id="ZjB-xR-DNI"/>
+                            <constraint firstItem="Huw-n2-VLV" firstAttribute="width" secondItem="DWe-Tp-7r3" secondAttribute="width" id="eJF-5R-32b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fdN-Ey-kfY"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="DWe-Tp-7r3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="5My-4U-maX"/>
+                <constraint firstAttribute="trailing" secondItem="DWe-Tp-7r3" secondAttribute="trailing" constant="10" id="KUw-8w-NLS"/>
+                <constraint firstItem="DWe-Tp-7r3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="qXh-Q4-BZy"/>
+                <constraint firstAttribute="bottom" secondItem="DWe-Tp-7r3" secondAttribute="bottom" constant="10" id="uOg-xP-Cg9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="cardImage" destination="eOi-6g-huL" id="9Vq-Mk-hk0"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

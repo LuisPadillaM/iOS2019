@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mUD-vb-7tM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Memory Game View Controller-->
+        <scene sceneID="gqi-kL-Oi7">
+            <objects>
+                <viewController storyboardIdentifier="MemoryGameViewController" id="mUD-vb-7tM" customClass="MemoryGameViewController" customModule="Final_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1ir-yC-dbl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bcA-Rh-L54">
+                                <rect key="frame" x="20" y="40" width="335" height="607"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRf-1J-Twu">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.81683474779999998" green="0.17150962350000001" blue="0.16286152600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Restart"/>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pzI-WH-Oay">
+                                        <rect key="frame" x="0.0" y="30" width="335" height="577"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="roY-go-3la">
+                                            <size key="itemSize" width="187" height="229"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="mUD-vb-7tM" id="UP2-kx-4PK"/>
+                                            <outlet property="delegate" destination="mUD-vb-7tM" id="UVi-IT-KVB"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sly-TQ-BHY" firstAttribute="bottom" secondItem="bcA-Rh-L54" secondAttribute="bottom" constant="20" id="72s-oc-fbZ"/>
+                            <constraint firstItem="bcA-Rh-L54" firstAttribute="top" secondItem="sly-TQ-BHY" secondAttribute="top" constant="20" id="8Gs-wP-ivA"/>
+                            <constraint firstItem="sly-TQ-BHY" firstAttribute="trailing" secondItem="bcA-Rh-L54" secondAttribute="trailing" constant="20" id="Oba-af-eeM"/>
+                            <constraint firstItem="bcA-Rh-L54" firstAttribute="leading" secondItem="sly-TQ-BHY" secondAttribute="leading" constant="20" id="uk0-f5-bGs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sly-TQ-BHY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="pzI-WH-Oay" id="utm-xR-d5C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PmR-8q-Qpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="149"/>
+        </scene>
+    </scenes>
+</document>

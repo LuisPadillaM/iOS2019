@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A09CBC8C48DA40E584348B06 /* Pods_Clase_6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19BCA9B0357787C31A6F8E83 /* Pods_Clase_6.framework */; };
+		BA743948222ADDCA0005EB9E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA743947222ADDCA0005EB9E /* R.generated.swift */; };
+		BA74394B222AE99F0005EB9E /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74394A222AE99F0005EB9E /* Meme.swift */; };
+		BA74394D222AECA30005EB9E /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74394C222AECA30005EB9E /* ServiceError.swift */; };
+		BA743951222AED2C0005EB9E /* MemeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA743950222AED2C0005EB9E /* MemeWorker.swift */; };
+		BA743954222AEFB30005EB9E /* MemesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA743953222AEFB30005EB9E /* MemesAPI.swift */; };
+		BA743956222AEFE50005EB9E /* MemesMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA743955222AEFE50005EB9E /* MemesMemory.swift */; };
+		BA743958222AF1780005EB9E /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA743957222AF1780005EB9E /* EndPoints.swift */; };
+		BA74395A222AF2F80005EB9E /* AlamoFireHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA743959222AF2F80005EB9E /* AlamoFireHelper.swift */; };
+		BA74395C222AF70F0005EB9E /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74395B222AF70F0005EB9E /* APIKeys.swift */; };
 		BA8A1F7D2221B1AB0040EFC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A1F7C2221B1AB0040EFC0 /* AppDelegate.swift */; };
 		BA8A1F852221B1AB0040EFC0 /* Clase_6.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA8A1F832221B1AB0040EFC0 /* Clase_6.xcdatamodeld */; };
 		BA8A1F872221B1AC0040EFC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA8A1F862221B1AC0040EFC0 /* Assets.xcassets */; };
@@ -27,6 +36,15 @@
 		19BCA9B0357787C31A6F8E83 /* Pods_Clase_6.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clase_6.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67F40AAACE17FDD99A9C178D /* Pods-Clase 6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clase 6.debug.xcconfig"; path = "Target Support Files/Pods-Clase 6/Pods-Clase 6.debug.xcconfig"; sourceTree = "<group>"; };
 		A4058410FCF9956F9C63E51B /* Pods-Clase 6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clase 6.release.xcconfig"; path = "Target Support Files/Pods-Clase 6/Pods-Clase 6.release.xcconfig"; sourceTree = "<group>"; };
+		BA743947222ADDCA0005EB9E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		BA74394A222AE99F0005EB9E /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		BA74394C222AECA30005EB9E /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		BA743950222AED2C0005EB9E /* MemeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeWorker.swift; sourceTree = "<group>"; };
+		BA743953222AEFB30005EB9E /* MemesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesAPI.swift; sourceTree = "<group>"; };
+		BA743955222AEFE50005EB9E /* MemesMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemesMemory.swift; sourceTree = "<group>"; };
+		BA743957222AF1780005EB9E /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		BA743959222AF2F80005EB9E /* AlamoFireHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireHelper.swift; sourceTree = "<group>"; };
+		BA74395B222AF70F0005EB9E /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		BA8A1F792221B1AB0040EFC0 /* Clase 6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clase 6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA8A1F7C2221B1AB0040EFC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA8A1F842221B1AB0040EFC0 /* Clase_6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clase_6.xcdatamodel; sourceTree = "<group>"; };
@@ -73,6 +91,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		BA743944222AD9AC0005EB9E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA743947222ADDCA0005EB9E /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA743949222AE9880005EB9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BA74394A222AE99F0005EB9E /* Meme.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA74394E222AECA90005EB9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BA74394C222AECA30005EB9E /* ServiceError.swift */,
+				BA743957222AF1780005EB9E /* EndPoints.swift */,
+				BA743959222AF2F80005EB9E /* AlamoFireHelper.swift */,
+				BA74395B222AF70F0005EB9E /* APIKeys.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BA74394F222AED120005EB9E /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				BA743950222AED2C0005EB9E /* MemeWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		BA743952222AEF9B0005EB9E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BA743953222AEFB30005EB9E /* MemesAPI.swift */,
+				BA743955222AEFE50005EB9E /* MemesMemory.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		BA8A1F702221B1AB0040EFC0 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +156,11 @@
 		BA8A1F7B2221B1AB0040EFC0 /* Clase 6 */ = {
 			isa = PBXGroup;
 			children = (
+				BA743952222AEF9B0005EB9E /* Services */,
+				BA74394F222AED120005EB9E /* Workers */,
+				BA74394E222AECA90005EB9E /* Helpers */,
+				BA743949222AE9880005EB9E /* Models */,
+				BA743944222AD9AC0005EB9E /* Resources */,
 				BA8A1F912221B6B30040EFC0 /* Scenes */,
 				BA8A1F7C2221B1AB0040EFC0 /* AppDelegate.swift */,
 				BA8A1F862221B1AC0040EFC0 /* Assets.xcassets */,
@@ -144,6 +211,7 @@
 			buildConfigurationList = BA8A1F8E2221B1AC0040EFC0 /* Build configuration list for PBXNativeTarget "Clase 6" */;
 			buildPhases = (
 				11769751190B132558A6FC29 /* [CP] Check Pods Manifest.lock */,
+				BA743943222AD8120005EB9E /* ShellScript */,
 				BA8A1F752221B1AB0040EFC0 /* Sources */,
 				BA8A1F762221B1AB0040EFC0 /* Frameworks */,
 				BA8A1F772221B1AB0040EFC0 /* Resources */,
@@ -240,6 +308,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -248,11 +317,31 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clase 6/Pods-Clase 6-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BA743943222AD8120005EB9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -261,14 +350,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA74394D222AECA30005EB9E /* ServiceError.swift in Sources */,
 				BA8A1F9B2221B6E40040EFC0 /* MemeSearchWorker.swift in Sources */,
 				BA8A1F9E2221B6E40040EFC0 /* MemeSearchViewController.swift in Sources */,
 				BA8A1F852221B1AB0040EFC0 /* Clase_6.xcdatamodeld in Sources */,
 				BA8A1F9F2221B6E40040EFC0 /* MemeSearchInteractor.swift in Sources */,
+				BA74395A222AF2F80005EB9E /* AlamoFireHelper.swift in Sources */,
 				BA8A1F9A2221B6E40040EFC0 /* MemeSearchPresenter.swift in Sources */,
+				BA743951222AED2C0005EB9E /* MemeWorker.swift in Sources */,
 				BA8A1F9C2221B6E40040EFC0 /* MemeSearchRouter.swift in Sources */,
+				BA743954222AEFB30005EB9E /* MemesAPI.swift in Sources */,
+				BA743956222AEFE50005EB9E /* MemesMemory.swift in Sources */,
 				BA8A1FA52221BA0A0040EFC0 /* MemeTableViewCell.swift in Sources */,
+				BA74395C222AF70F0005EB9E /* APIKeys.swift in Sources */,
+				BA74394B222AE99F0005EB9E /* Meme.swift in Sources */,
+				BA743948222ADDCA0005EB9E /* R.generated.swift in Sources */,
 				BA8A1F7D2221B1AB0040EFC0 /* AppDelegate.swift in Sources */,
+				BA743958222AF1780005EB9E /* EndPoints.swift in Sources */,
 				BA8A1F9D2221B6E40040EFC0 /* MemeSearchModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

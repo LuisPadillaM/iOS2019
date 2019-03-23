@@ -1,0 +1,7 @@
+target 'Final Project' do
+  use_frameworks!
+  pod 'Kingfisher'
+  pod 'Alamofire'
+  pod 'R.swift'
+  pod 'JGProgressHUD'
+end

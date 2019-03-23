@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mUD-vb-7tM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Ak-CU-qxG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,17 +24,26 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="brm-BV-EVq">
                                         <rect key="frame" x="19" y="0.0" width="337.5" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-91-khU">
-                                                <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-91-khU">
+                                                <rect key="frame" x="0.0" y="4" width="270" height="22"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="searchCriteriaChangedAction:" destination="mUD-vb-7tM" eventType="editingChanged" id="Zjc-83-eah"/>
+                                                </connections>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phK-EI-EDB">
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phK-EI-EDB">
                                                 <rect key="frame" x="289.5" y="0.0" width="48" height="30"/>
                                                 <color key="backgroundColor" red="0.81683474779999998" green="0.17150962350000001" blue="0.16286152600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Search"/>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="searchAction:" destination="mUD-vb-7tM" eventType="touchUpInside" id="qgu-6V-u94"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -44,16 +53,19 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DoA-kr-gP9">
                                         <rect key="frame" x="0.0" y="104" width="375" height="459"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="mUD-vb-7tM" id="sOG-fH-EdY"/>
+                                            <outlet property="delegate" destination="mUD-vb-7tM" id="YRl-BD-aFJ"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="brm-BV-EVq" firstAttribute="width" secondItem="JhN-CB-7Km" secondAttribute="width" multiplier="0.9" id="4sK-cD-USA"/>
                                     <constraint firstItem="DoA-kr-gP9" firstAttribute="width" secondItem="JhN-CB-7Km" secondAttribute="width" id="vi8-BL-1vE"/>
-                                    <constraint firstItem="DoA-kr-gP9" firstAttribute="centerX" secondItem="JhN-CB-7Km" secondAttribute="centerX" id="y9D-fG-m1s"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="JhN-CB-7Km" firstAttribute="top" secondItem="sly-TQ-BHY" secondAttribute="top" constant="20" id="3JQ-Uu-edo"/>
                             <constraint firstItem="JhN-CB-7Km" firstAttribute="width" secondItem="1ir-yC-dbl" secondAttribute="width" id="RQN-WI-G05"/>
@@ -63,6 +75,11 @@
                         <viewLayoutGuide key="safeArea" id="sly-TQ-BHY"/>
                     </view>
                     <navigationItem key="navigationItem" id="RE5-Jv-ev1"/>
+                    <connections>
+                        <outlet property="memeTableView" destination="DoA-kr-gP9" id="Ajl-7X-vmH"/>
+                        <outlet property="searchButton" destination="phK-EI-EDB" id="bJr-fU-ivA"/>
+                        <outlet property="searchTextField" destination="XtK-91-khU" id="vjl-IP-sRX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PmR-8q-Qpg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
