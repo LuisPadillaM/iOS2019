@@ -19,10 +19,23 @@ class CardCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setupCell(item : MemoryGame.DataSource.ViewModel.DisplayedItem) {
-        cardImage.kf.indicatorType = .activity
+    func setupCellInitialCells(item : MemoryGame.DataSource.ViewModel.CardItem) {
+        if  let hidenImage = R.image.hiddenImage() {
+            cardImage.image = hidenImage
+        }
+    }
+    
+    func setupCell(item : MemoryGame.DataSource.ViewModel.CardItem) {
+        let hidenImage = R.image.hiddenImage()
         let placeHolderImage = R.image.notFound()
-        cardImage.kf.setImage(with: item.url, placeholder: placeHolderImage)
+            // cardImageView.alpha = cardState.isAlreadyGuessed || cardState.isFlipped ? 1 : 0
+        if(item.isFlipped || item.isAlreadyGuessed){
+            cardImage.kf.indicatorType = .activity
+            cardImage.kf.setImage(with: item.url, placeholder: placeHolderImage)
+        } else {
+            cardImage.image = hidenImage;
+        }
+       
     }
 
 }

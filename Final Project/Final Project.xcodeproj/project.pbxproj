@@ -11,7 +11,6 @@
 		BA291068223D57E600ACCA9D /* Final_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA291066223D57E600ACCA9D /* Final_Project.xcdatamodeld */; };
 		BA29106A223D57E800ACCA9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA291069223D57E800ACCA9D /* Assets.xcassets */; };
 		BA29106D223D57E800ACCA9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA29106B223D57E800ACCA9D /* LaunchScreen.storyboard */; };
-		BA291076223D586A00ACCA9D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA291075223D586A00ACCA9D /* Card.swift */; };
 		BA291079223D59E900ACCA9D /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA291078223D59E900ACCA9D /* ApiKeys.swift */; };
 		BA704F032245DDE300789F90 /* AlamoFireHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA704F022245DDE300789F90 /* AlamoFireHelper.swift */; };
 		BA704F052245DE1000789F90 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA704F042245DE1000789F90 /* ServiceError.swift */; };
@@ -42,7 +41,6 @@
 		BA291069223D57E800ACCA9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA29106C223D57E800ACCA9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA29106E223D57E900ACCA9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA291075223D586A00ACCA9D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		BA291078223D59E900ACCA9D /* ApiKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKeys.swift; sourceTree = "<group>"; };
 		BA704F022245DDE300789F90 /* AlamoFireHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamoFireHelper.swift; sourceTree = "<group>"; };
 		BA704F042245DE1000789F90 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 		BA291074223D585B00ACCA9D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BA291075223D586A00ACCA9D /* Card.swift */,
 				BA704F0C2245DFC700789F90 /* Meme.swift */,
 			);
 			path = Models;
@@ -364,7 +361,6 @@
 				BA704F192245E05200789F90 /* MemoryGameRouter.swift in Sources */,
 				BA704F072245DE2900789F90 /* Endpoints.swift in Sources */,
 				BA704F1A2245E05200789F90 /* MemoryGameModels.swift in Sources */,
-				BA291076223D586A00ACCA9D /* Card.swift in Sources */,
 				BA704F0B2245DFA400789F90 /* MemesApi.swift in Sources */,
 				BA704F422246240900789F90 /* CardCollectionViewCell.swift in Sources */,
 				BA704F0D2245DFC700789F90 /* Meme.swift in Sources */,

@@ -20,11 +20,22 @@ enum MemoryGame {
             var error : ServiceError?
         }
         struct ViewModel {
-            struct DisplayedItem {
+            struct CardItem {
+                var id :  Int
                 var url : URL?
                 var placeHolderImage : UIImage?
+                var isAlreadyGuessed = false
+                var isFlipped = false
+                
+                init(id: Int, url: URL?, placeHolderImage : UIImage?, isAlreadyGuessed : Bool = false, isFlipped : Bool = false) {
+                    self.id = id
+                    self.url = url
+                    self.placeHolderImage = placeHolderImage
+                    self.isAlreadyGuessed = isAlreadyGuessed
+                     self.isFlipped = isFlipped
+                }
             }
-            var displayedItems : [DisplayedItem]
+            var displayedItems : [CardItem]
         }
     }
 }

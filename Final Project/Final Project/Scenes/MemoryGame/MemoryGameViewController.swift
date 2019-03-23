@@ -15,10 +15,20 @@ protocol MemoryGameDisplayLogic: class {
 
 class MemoryGameViewController: UIViewController, MemoryGameDisplayLogic {
     
-    var dataSource = [MemoryGame.DataSource.ViewModel.DisplayedItem]()
+    var dataSource = [MemoryGame.DataSource.ViewModel.CardItem]()
     var activityIndicator = JGProgressHUD(style: .dark)
     var interactor: MemoryGameBusinessLogic?
     var router: (NSObjectProtocol & MemoryGameRoutingLogic & MemoryGameDataPassing)?
+    private let sectionInsets = UIEdgeInsets(top: 5.0,
+                                             left: 5.0,
+                                             bottom: 5.0,
+                                             right: 5.0)
+    
+    // Game logic
+    var gameFinished = false
+    
+    var selectedItems = [MemoryGame.DataSource.ViewModel.CardItem]()
+    
     
     // MARK: IBOutlets
     
@@ -90,9 +100,13 @@ class MemoryGameViewController: UIViewController, MemoryGameDisplayLogic {
         // memeTableView.reloadData()
     }
     
+    @IBAction func RestartGame(_ sender: UIButton) {
+        self.startGame()
+    }
 }
 
 extension MemoryGameViewController : UICollectionViewDelegate, UICollectionViewDataSource {
+    
     
     func registerCustomCell(){
          collectionView?.register(R.nib.cardCollectionViewCell)
@@ -111,6 +125,129 @@ extension MemoryGameViewController : UICollectionViewDelegate, UICollectionViewD
         cell.setupCell(item: dataSource[indexPath.row])
         return cell
     }
+
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.dataSource = self.flipCard(index : indexPath.row)
+         self.collectionView.reloadData()
+        if(self.hasFinishedGame(cards : self.dataSource)){
+            self.showGameFinishedAlert()
+        }
+    }
+
+}
+
+extension MemoryGameViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let rows = CGFloat(Constants.Config.Rows)
+         let paddingSpace = (self.sectionInsets.left + self.sectionInsets.right)  * rows
+        let frameWidth = view.frame.width
+        let availableWidth = frameWidth - paddingSpace
+        let widthPerItem = availableWidth / rows
+        
+         return CGSize(width: widthPerItem, height: widthPerItem)
+    }
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets()
+//        // return self.sectionInsets
+//    }
+
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return self.sectionInsets.left
+//    }
+}
+
+extension MemoryGameViewController {
+    
+    func flipCard(index: Int) -> [MemoryGame.DataSource.ViewModel.CardItem]{
+        
+        var changedCards = self.dataSource
+        
+        changedCards[index].isFlipped = true
+        
+        let alreadyFlippedCardsInGame = changedCards.filter({ card -> Bool in
+            return !card.isAlreadyGuessed && card.isFlipped
+        })
+        
+        if alreadyFlippedCardsInGame.count == 2 {
+            
+            let firstCardUrl = alreadyFlippedCardsInGame[0].id
+            let secondCardUrl = alreadyFlippedCardsInGame[1].id
+            
+            let playerGuessedRight = firstCardUrl == secondCardUrl
+            
+            if playerGuessedRight {
+                changedCards = checkGuessedCards(for: firstCardUrl, in: changedCards)
+            }
+        }
+        
+        if alreadyFlippedCardsInGame.count == 3 {
+            changedCards = flipBackCard(changedCards, exceptIndex: index)
+        }
+        
+        return changedCards
+    }
+    
+    func checkGuessedCards(for id: Int, in cards: [MemoryGame.DataSource.ViewModel.CardItem]) -> [MemoryGame.DataSource.ViewModel.CardItem] {
+        var changedCards = cards
+        for index in 0 ..< cards.count {
+            if cards[index].id == id {
+                changedCards[index].isAlreadyGuessed = true
+            }
+        }
+        
+        return changedCards
+    }
+    
+    func flipBackCard (_ cards: [MemoryGame.DataSource.ViewModel.CardItem], exceptIndex: Int) -> [MemoryGame.DataSource.ViewModel.CardItem] {
+        var changedCards = cards
+        for index in 0 ..< cards.count {
+            if index != exceptIndex {
+                changedCards[index].isFlipped = false
+            }
+        }
+        
+        return changedCards
+    }
+    
+    func hasFinishedGame(cards: [MemoryGame.DataSource.ViewModel.CardItem]) -> Bool {
+        
+        for card in cards {
+            if !card.isAlreadyGuessed {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    
+    static func generateNewCards( memes : [Meme]) -> [MemoryGame.DataSource.ViewModel.CardItem] {
+        
+        let differentImagesSize = (Constants.Config.Rows * Constants.Config.Columns) / 2
+        let memesShuffled = memes.shuffled()
+        let differentMemes = memesShuffled.prefix(differentImagesSize)
+ 
+        var displayedMemes = differentMemes.map({
+            MemoryGame.DataSource.ViewModel.CardItem.init( id : $0.id, url : URL(string : $0.url), placeHolderImage : R.image.notFound())
+        })
+        
+        displayedMemes.append(contentsOf: displayedMemes)
+        return displayedMemes.shuffled()
+    }
+
+    
+    fileprivate func showGameFinishedAlert() {
+        let alertController = UIAlertController(title: "You won the game", message: "Do you want to start again?", preferredStyle: .alert)
+    
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.startGame()
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+
     
 }
+

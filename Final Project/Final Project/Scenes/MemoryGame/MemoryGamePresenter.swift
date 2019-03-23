@@ -24,9 +24,11 @@ class MemoryGamePresenter: MemoryGamePresentationLogic {
         }
         
         if let memes = response.items {
-            let displayedMemes = memes.map({
-                MemoryGame.DataSource.ViewModel.DisplayedItem.init(url : URL(string : $0.url), placeHolderImage : R.image.notFound())
-            })
+            // viewController.generateNewCards()
+            let displayedMemes = MemoryGameViewController.generateNewCards(memes : memes)
+//            let displayedMemes = memes.map({
+//                MemoryGame.DataSource.ViewModel.CardItem.init( id : $0.id, url : URL(string : $0.url), placeHolderImage : R.image.notFound())
+//            })
             viewController?.displayDataSource(viewModel: MemoryGame.DataSource.ViewModel.init(displayedItems: displayedMemes))
         }
     }

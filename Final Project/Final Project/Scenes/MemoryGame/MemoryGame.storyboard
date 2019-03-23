@@ -26,12 +26,15 @@
                                         <color key="backgroundColor" red="0.81683474779999998" green="0.17150962350000001" blue="0.16286152600000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Restart"/>
+                                        <connections>
+                                            <action selector="RestartGame:" destination="mUD-vb-7tM" eventType="touchUpInside" id="C9h-p8-ZiE"/>
+                                        </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pzI-WH-Oay">
                                         <rect key="frame" x="0.0" y="30" width="335" height="577"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="roY-go-3la">
-                                            <size key="itemSize" width="187" height="229"/>
+                                            <size key="itemSize" width="80" height="100"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
