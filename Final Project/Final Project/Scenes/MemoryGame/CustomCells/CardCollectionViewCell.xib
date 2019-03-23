@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DWe-Tp-7r3">
-                        <rect key="frame" x="5" y="5" width="120" height="140"/>
+                        <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Huw-n2-VLV">
-                                <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eOi-6g-huL">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -44,10 +44,10 @@
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="DWe-Tp-7r3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="5My-4U-maX"/>
-                <constraint firstAttribute="trailing" secondItem="DWe-Tp-7r3" secondAttribute="trailing" constant="5" id="KUw-8w-NLS"/>
-                <constraint firstItem="DWe-Tp-7r3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="qXh-Q4-BZy"/>
-                <constraint firstAttribute="bottom" secondItem="DWe-Tp-7r3" secondAttribute="bottom" constant="5" id="uOg-xP-Cg9"/>
+                <constraint firstItem="DWe-Tp-7r3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5My-4U-maX"/>
+                <constraint firstAttribute="trailing" secondItem="DWe-Tp-7r3" secondAttribute="trailing" id="KUw-8w-NLS"/>
+                <constraint firstItem="DWe-Tp-7r3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="qXh-Q4-BZy"/>
+                <constraint firstAttribute="bottom" secondItem="DWe-Tp-7r3" secondAttribute="bottom" id="uOg-xP-Cg9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>

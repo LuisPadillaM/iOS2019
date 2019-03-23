@@ -139,9 +139,9 @@ extension MemoryGameViewController : UICollectionViewDelegate, UICollectionViewD
 extension MemoryGameViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let rows = CGFloat(Constants.Config.Rows)
-         let paddingSpace = (self.sectionInsets.left + self.sectionInsets.right)  * rows
+        // let paddingSpace = (self.sectionInsets.left + self.sectionInsets.right)  * rows
         let frameWidth = view.frame.width
-        let availableWidth = frameWidth - paddingSpace
+        let availableWidth = frameWidth
         let widthPerItem = availableWidth / rows
         
          return CGSize(width: widthPerItem, height: widthPerItem)
@@ -247,7 +247,14 @@ extension MemoryGameViewController {
         
         present(alertController, animated: true, completion: nil)
     }
-
     
 }
 
+
+extension UIViewController {
+    static func showErrorAlertController(message : String, viewController : UIViewController) {
+            let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            viewController.present(alertController, animated: true, completion: nil)
+    }
+}

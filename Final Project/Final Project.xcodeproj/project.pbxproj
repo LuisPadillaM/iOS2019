@@ -28,6 +28,7 @@
 		BA704F422246240900789F90 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA704F402246240900789F90 /* CardCollectionViewCell.swift */; };
 		BA704F432246240900789F90 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA704F412246240900789F90 /* CardCollectionViewCell.xib */; };
 		BA704F4B2246358400789F90 /* MemoryGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA704F4A2246358400789F90 /* MemoryGame.storyboard */; };
+		BA704F512246F07900789F90 /* ErrorHandlerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA704F502246F07900789F90 /* ErrorHandlerWorker.swift */; };
 		BB92B3A4864497253672A147 /* Pods_Final_Project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15CBE841718B45935B340339 /* Pods_Final_Project.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		BA704F402246240900789F90 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA704F412246240900789F90 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		BA704F4A2246358400789F90 /* MemoryGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MemoryGame.storyboard; sourceTree = "<group>"; };
+		BA704F502246F07900789F90 /* ErrorHandlerWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				BA704F1F2245E2A900789F90 /* MemoryGameWorker.swift */,
+				BA704F502246F07900789F90 /* ErrorHandlerWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				BA704F1C2245E05200789F90 /* MemoryGameInteractor.swift in Sources */,
 				BA704F1B2245E05200789F90 /* MemoryGameViewController.swift in Sources */,
 				BA291060223D57E600ACCA9D /* AppDelegate.swift in Sources */,
+				BA704F512246F07900789F90 /* ErrorHandlerWorker.swift in Sources */,
 				BA704F172245E05200789F90 /* MemoryGamePresenter.swift in Sources */,
 				BA704F3E22461DAA00789F90 /* R.generated.swift in Sources */,
 				BA704F032245DDE300789F90 /* AlamoFireHelper.swift in Sources */,

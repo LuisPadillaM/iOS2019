@@ -46,6 +46,9 @@
                                         </connections>
                                     </collectionView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="pzI-WH-Oay" firstAttribute="top" secondItem="vRf-1J-Twu" secondAttribute="bottom" constant="10" id="Ejf-M9-mUz"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
